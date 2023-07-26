@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block title %}My Todo App{% endblock %}
+
+{% block css %}
+    {{ block.super }}
+    <!-- Дополнительные стили для index.html -->
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+{% endblock %}
+
+{% block content %}
+    <h1>My Todo App</h1>
+    <div>
+        <input type="text" class="add-todo">
+        <button class="add-todo-button">add todo</button>
+    </div>
+    <ul class="todo-container">
+        <li class="todo-item">1</li>
+        <li class="todo-item">2</li>
+        <li class="todo-item">3</li>
+        <li class="todo-item">4</li>
+        <li class="todo-item">5</li>
+    </ul>
+
+    <a href="{% url 'top-sellers' %}">Посмотреть топ продаж</a>
+    
+{% endblock %}

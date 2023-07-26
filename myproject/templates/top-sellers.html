@@ -1,0 +1,11 @@
+<!-- top-sellers.html -->
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Топ продаж</h1>
+    <ul>
+        <li><a href="{% url 'product-detail' product_id=1 %}">Товар 1</a></li>
+        <li><a href="{% url 'product-detail' product_id=2 %}">Товар 2</a></li>
+        <!-- Добавьте другие товары -->
+    </ul>
+{% endblock %}
